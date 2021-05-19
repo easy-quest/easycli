@@ -31,7 +31,10 @@ var cfgFile string
 var rootCmd = &cobra.Command{
 	Use:   "easycli",
 	Short: "Termux API",
-	Long:  `zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz.`,
+	Long: `
+--------------------------------------------------
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+==================================================`,
 	// Run: func(cmd *cobra.Command, args []string) { },
 }
 
