@@ -19,6 +19,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+
+	_ "encoding/json"
 )
 
 // randomCmd represents the random command
@@ -27,7 +29,7 @@ var randomCmd = &cobra.Command{
 	Short: "Termux API",
 	Long:  `Termux API first apps cli.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("random called")
+		getRandomBattery()
 	},
 }
 
@@ -44,3 +46,26 @@ type BatteryStatusResponse struct {
 	Status      string
 	Temperature float64
 }
+
+func getRandomBattery() {
+	fmt.Println("Get random dad joke :P")
+
+}
+
+// BatteryStatus mimics the termux-battery-status script/call.
+//func BatteryStatus() (*BatteryStatusResponse, error) {
+//return batteryStatus(toolExec)
+//}
+//
+//func batteryStatus(execF toolExecFunc) (*BatteryStatusResponse, error) {
+//var resp BatteryStatusResponse
+//bsrBytes, err := execF(nil, "BatteryStatus")
+//if err != nil {
+//return nil, err
+//}
+//err = json.Unmarshal(bsrBytes, &resp)
+//if err != nil {
+//return nil, err
+//}
+//return &resp, nil
+//}
